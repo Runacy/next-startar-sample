@@ -5,7 +5,7 @@ import '../styles/main.css';
 export default function MyApp({ Component, pageProps }) {
   return (
     <div>
-      {console.log("デプロイしたよーーー")}
+      {console.log('デプロイしたよーーー')}
       <Component {...pageProps} />
     </div>
   );
