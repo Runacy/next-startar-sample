@@ -14,6 +14,7 @@ export default function MyApp({ Component, pageProps }) {
     <div>
       <button onClick={f}>クリック</button>
       {console.log('デプロイしたよーーー')}
+      {console.log('wip')}
       <Component {...pageProps} />
     </div>
   );
