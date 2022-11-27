@@ -2,7 +2,9 @@ name: Azure Static Web Apps CI/CD
 
 on:
   push:
-    branches:
+    branches: # プレビュー環境にデプロイする。ここで指定したやつに対してプレビュー環境が作成される
+      - main
+      - develop
       - "**"
   pull_request:
     types: [opened, synchronize, reopened, closed]
@@ -31,7 +33,8 @@ jobs:
           api_location: "" # Api source code path - optional
           output_location: "out" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
-          deployment_environment: "release" # pull環境作るにはこれ？
+          production_branch: "main"
+
         env:
           is_static_export: true # 静的サイトジェネレータになる.
 
